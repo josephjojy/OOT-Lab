@@ -7,7 +7,7 @@ class Account
 	int acc_no;
 	void input()
 	{
-		cin.ignore(10,'\n');
+		cin.ignore(1,'\n');
 		cout<<"\nName:";
 		getline(cin,name);
 		cout<<"Account Number:";
@@ -17,8 +17,7 @@ class Account
 class Cur_Acct:public Account
 {	
 	public:
-	float bal,in,wd,d;
-	
+	float bal,in,wd,d;	
 	void deposit()
 	{
 		cout<<"Deposit amount:";
@@ -93,7 +92,7 @@ int main()
 							case 2:obj.interest();break;
 							case 3:obj.withdrawal();break;
 							case 4:obj.balance();break;
-							case 5:ch=0;
+							case 5:ch=0;break;
 							default:cout<<"Invalid input";
 						}
 						obj.balance();
@@ -105,7 +104,7 @@ int main()
 					obj.input();
 					do
 					{
-						cout<<"Enter\n1-Deposit\n2-Interest\n3-Withdrawal\n4-Balance\n5-Exit\n";
+						cout<<"\nEnter\n1-Deposit\n2-Interest\n3-Withdrawal\n4-Balance\n5-Exit\n";
 						cin>>ch;
 						switch(ch)
 						{
